@@ -8,7 +8,7 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableType;
 import com.google.ads.mediation.admob.AdMobAdapter;
-import com.google.ads.mediation.facebook.FacebookAdapter;
+import com.google.ads.mediation.facebook.MetaAdapter;
 import com.google.ads.mediation.facebook.FacebookExtras;
 import com.google.android.gms.ads.VideoOptions;
 import com.google.android.gms.ads.admanager.AdManagerAdRequest;
@@ -81,7 +81,7 @@ public class Utils {
     }
 
     public static void setMediaAspectRatio(int type, NativeAdOptions.Builder adOptions) {
-        Log.d("LOG_NATIVE_ADS" , FacebookAdapter.class.getName());
+        Log.d("LOG_NATIVE_ADS" , MetaAdapter.class.getName());
 
         adOptions.setMediaAspectRatio(type);
     }
@@ -90,7 +90,7 @@ public class Utils {
         if (options == null) return;
         if (options.hasKey("nativeBanner")) {
             Bundle facebookExtras = new FacebookExtras().setNativeBanner(options.getBoolean("nativeBanner")).build();
-            adRequest.addNetworkExtrasBundle(FacebookAdapter.class, facebookExtras);
+            adRequest.addNetworkExtrasBundle(MetaAdapter.class, facebookExtras);
         }
     }
 

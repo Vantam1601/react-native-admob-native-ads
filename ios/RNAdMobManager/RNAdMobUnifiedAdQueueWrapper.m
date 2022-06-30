@@ -13,7 +13,7 @@
 #import "CacheManager.h"
 @import GoogleMobileAds;
 #ifdef MEDIATION_FACEBOOK
-@import FacebookAdapter;
+@import MetaAdapter;
 #endif
 
 @implementation RNAdMobUnifiedAdQueueWrapper{
